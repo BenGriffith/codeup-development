@@ -19,6 +19,10 @@
 		PRIMARY KEY (id)
 	);';
 
+	if (!$mysqli->query($query)) {
+  		throw new Exception("Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error);
+	}
+
 	$national_parks = [
 		['park_name' => 'Acadia', 				'park_location' => 'Maine', 			'park_description' => 'Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats.', 																				'park_date' => 'February 26, 1919', 	'park_area' => '47,389'],
 		['park_name' => 'American Samoa', 		'park_location' => 'American Samoa',	'park_description' => 'The southernmost national park is on three Samoan islands and protects coral reefs, rainforests, volcanic mountains, and white beaches. The area is also home to flying foxes, brown boobies, sea turtles, and 900 species of fish.', 																													'park_date' => 'October 31, 1988', 		'park_area' => '9,000'],
@@ -33,13 +37,17 @@
 	];
 
 	foreach ($national_parks as $parks) {
-		$query = "INSERT INTO national_parks (name, location, description, date_established, area_in_acres) VALUES ('{$parks['park_name']}', '{$parks['park_location']}', '{$parks['park_description']}', '{$parks['park_date']}', '{$parks['park_area']}');";	
-		$mysqli->query($query);
-	}
+		$description = $mysqli->real_escape_string($parks['park_description']);
 
-	// Run query, if there are errors then display them
-	if (!$mysqli->query($query)) {
-		throw new Exception("Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error);
+		$query = "INSERT INTO national_parks (name, location, description, date_established, area_in_acres) 
+		VALUES ('{$parks['park_name']}', '{$parks['park_location']}', '{$parks['park_description']}', '{$parks['park_date']}', 
+		'{$parks['park_area']}');";	
+
+		$mysqli->query($query);
+
+		if (!$mysqli->query($query)) {
+			throw new Exception("OH NODES!" . $mysqli->error);
+		}
 	}
 
 	// echo $mysqli->host_info . "\n";
