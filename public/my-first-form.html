@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First HTML Form</title>	
+	</head>
+	<body>
+		<h2>User Login</h2>
+			<form method="POST" action="http://requestb.in/11epllh1">
+				<p>
+					<label for="username">Username</label>
+					<input id="username" name="username" type="text" placeholder="Enter Username">
+				</p>
+				<p>
+					<label for="password">Password</label>
+					<input id="password" name="password" type="password" placeholder="Enter password">
+				</p>
+				<p>
+					<button type="submit">Login</button>
+				</p>
+			</form>
+		<h2>Compose an Email</h2>
+			<form method="POST" action="http://requestb.in/11epllh1">
+				<p>
+					<label for="email_to">To:</label>
+					<input id="email_to" name="email_to" type="text" placeholder="Recipient Email">
+				</p>
+				<p>
+					<label for="email_from">From:</label>
+					<input id="email_from" name="email_from" type="text" placeholder="Your Email">
+				</p>
+				<p>
+					<label for="email_subject">Subject:</label>
+					<input id="email_subject" name="email_subject" type="text" placeholder="Email Subject">
+				</p>
+				<p>
+					<label for="email_body">Message:</label>
+					<textarea id="email_body" name="email_body" rows="5" cols="40" placeholder="Enter Message Here"></textarea>
+				</p>
+				<p>
+					Would you like to save a copy of your email to your sent folder? Please select 'Yes' or 'No'.
+				</p>
+				<label for="save_copy_yes">
+					<input type="checkbox" id="save_copy_yes" name="save_copy[]" value="yes"> Yes
+				</label>
+				<label for="save_copy_no">
+					<input type="checkbox" id="save_copy_no" name="save_copy[]" value="no" checked> No
+				</label>
+				<p>
+					<button type="submit">Send</button>
+				</p>
+			</form>
+			<h2>Multiple Choice Test</h2>
+			<form method="POST" action="http://requestb.in/11epllh1">
+				<p>Who is the best basketball player of all time?</p>
+				<label for="q1a">
+					<input type="radio" id="q1a" name="q1" value="Michael Jordan">Michael Jordan
+				</label>
+				<label for="q1b">
+					<input type="radio" id="q1b" name="q1" value="Larry Bird">Larry Bird
+				</label>
+				<label for="q1c">
+					<input type="radio" id="q1c" name="q1" value="Magic Johnson">Magic Johnson
+				</label>
+				<label for="q1d">
+					<input type="radio" id="q1d" name="q1" value="LeBron James">LeBron James
+				</label>
+				
+				<p>What year was the Declaration of Independence signed?</p>
+				<label for="q2a">
+					<input type="radio" id="q2a" name="q2" value="1845">1845
+				</label>
+				<label for="q2b">
+					<input type="radio" id="q2b" name="q2" value="1776">1776
+				</label>
+				<label for="q2c">
+					<input type="radio" id="q2c" name="q2" value="1994">1994
+				</label>
+				<label for="q2d">
+					<input type="radio" id="q2d" name="q2" value="1735">1735
+				</label>
+
+				<p>Who was the first President of the United States?</p>
+				<label for="george_washington">
+					<input type="checkbox" id="george_washington" name="president[]" value="George Washington">George Washington
+				</label>
+				<label for="teddy_roosevelt">
+					<input type="checkbox" id="teddy_roosevelt" name="president[]" value="Teddy Roosevelt">Teddy Roosevelt
+				</label>
+				<label for="abraham_lincoln">
+					<input type="checkbox" id="abraham_lincoln" name="president[]" value="Abraham Lincoln" checked>Abraham Lincoln
+				</label>
+				<label for="richard_nixon">
+					<input type="checkbox" id="richard_nixon" name="president[]" value="Richard Nixon" checked>Richard Nixon
+				</label>
+				<br>
+				<label for="state">What is the best state in the USA?</label>
+				<select name="state[]" id="state" multiple>
+					<option value="tx">Texas</option>
+					<option value="ca">California</option>
+					<option value="fl">Florida</option>
+					<option value="co">Colorado</option>
+					<option value="or">Oregon</option>
+				</select>
+					<button type="submit">Submit</button>
+				</p>
+			</form>
+			<h2>Select Testing</h2>
+			<form method="POST" action="http://requestb.in/11epllh1">
+				<label for="pizza">Do you like pizza?
+					<select name="pizza" id="pizza">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+				</label>
+				<p>
+					<button type="submit">Submit</button>
+				</p>
+
+			</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

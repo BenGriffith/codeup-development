@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Break and Continue</title>
+	</head>
+	<body>
+		<script>
+			// generate a random number between 1 and 50
+			var random = Math.floor((Math.random()*50)+1);
+
+			// if the number isn't odd keep getting a number till it 
+			// is odd
+			while (random % 2 == 0) {
+				continue;
+			}
+
+			// print random number to the screen
+			console.log("Random odd number to skip is: " + random);
+
+			// if random number modulus 2 does not equal zero then
+			// continue. if it does = 0 then it is even. if it does
+			// not equal zero then it is odd.
+
+			// by using break and continue use console.log to log
+			// all the odd numbers from 1 to 50, except the random
+			// odd number you generated
+			for (i = 1; i < 51; i++) {
+				if ((i % 2 !== 0) && (i !== random)) {
+					console.log("Here is an odd number: " + i);
+				} else if ((i % 2 !== 0) && (i == random)) {
+					console.log("Yipes! Skipping number: " + random);
+				}
+			}
+
+			// the break keyword allows you to exit the loop anytime
+			// the continue keyword allows you to skip to the next loop
+			// iteration without completing processing of the entire
+			// block code
+		</script>
+	</body>
+</html>

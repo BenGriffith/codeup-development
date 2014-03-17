@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dialog Functions</title>
+	</head>
+	<body>
+		<script>
+			// todo: Ask the user for their name.
+			var user = prompt("What is your name?");
+
+			// Keep asking for the user's name if an empty input is provided
+			while (user === "") {
+				var user = prompt("What is your name?");
+				user;
+			}
+
+			// todo: Show an alert message that welcomes the user based on their input.
+			alert("Welcome, " + user + " it's great to see you again.");
+
+			// todo: Ask the user if they like pizza.
+			// Based on their answer tell show a creative alert message.
+			var pizza = prompt("Do you like pizza?");
+			
+			// converts user's response to uppercase text
+			var userAnswer = pizza.toUpperCase();
+
+			if (userAnswer == "YES" || userAnswer == "Y") {
+				console.log("Awesome, me too!");
+			} else if (userAnswer == "NO" || userAnswer == "N") {
+				console.log("Boo!");
+			} else {
+				console.log("Boo!");
+			}
+
+
+		</script>
+	</body>
+</html>

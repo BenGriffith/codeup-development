@@ -1,0 +1,12 @@
+body {
+	background-color: #f4faff;
+	font-family: helvetica;
+}
+
+h2 {
+	color: #333;
+}
+
+ul {
+	list-style: square;
+}
