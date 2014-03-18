@@ -16,7 +16,17 @@
 	    $rows[] = $row;
 	}
 
+	$sort_name_asc = $mysqli->query("SELECT name FROM national_parks ORDER BY ASC");
+
+	// $sorting_actions = array($sort_name_asc);
+
+	// if (isset($_GET['sort_asc'])) {
+	// 	return $sorting_actions[0];
+	// 	header('Location: national_parks.php');
+	// }
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
