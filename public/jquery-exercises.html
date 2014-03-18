@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<title>Ben's Basic Page</title>
+		
 		<script src="/js/jquery.js"></script>
 		<script>
-			$(document).ready(function() {
-				var contents = $('#first').html();
-				alert(contents);
+			$('document').ready(function () {
+				$('.codeup').css('border', '1px solid red');
 			})
 		</script>
 
@@ -22,15 +22,15 @@
 	<body>
 		<div class="container">
 			
-			<h1 class="header">Benjamin Griffith</h1>
+			<h1 class="codeup">Benjamin Griffith</h1>
 
-			<p id="television_title">Favorite Television Shows</p>
+			<p class="codeup">Favorite Television Shows</p>
 
 			<ul class="list_of_television_shows">
 				<li id="first">Saved by the Bell</li>			
-				<li id="first">24</li>
-				<li class="shows">Lost</li>
-				<li class="shows">Battlefield Earth</li>
+				<li class="codeup">24</li>
+				<li class="codeup">Lost</li>
+				<li class="codeup">Battlefield Earth</li>
 			</ul>
 			
 		</div>
