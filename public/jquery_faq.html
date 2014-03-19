@@ -15,6 +15,10 @@
 			.invisible {
 				display: none;
 			}
+
+			ul, li {
+				cursor: pointer;
+			}
 		</style>
 	</head>
 	<body>
@@ -81,6 +85,12 @@
 				});
 
 				$('li').first().css('font-weight', 'bold');
+
+				// Create jQuery code that adds the invisible class on the parent 'ul' of any 'li' that is clicked
+				$('li').parent().click(function(event) {
+					event.preventDefault();
+					$(this).addClass('invisible');
+				})
 			})
 		</script>
 	</body>
