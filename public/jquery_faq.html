@@ -46,12 +46,41 @@
 			<a href="#" id="visible_invisible">Click to toggle answers to FAQs</a>
 		</div>
 
+		<div class="container">
+			<ul>
+				<li><h3>Big Bend Facts</h3></li>
+				<li>Located in Texas</li>
+				<li>Established on June 12, 1944</li>
+				<li>Totals 801,163.21 acres</li>
+				<li>Includes a part of the Chihuahuan Desert</li>
+			</ul>
+			<ul>
+				<li><h3>Acadia Facts</h3></li>
+				<li>Located in Maine</li>
+				<li>Established on February 26, 1919</li>
+				<li>Totals 47,389.67 acres</li>
+				<li>Features the tallest mountain on the Atlantic coast of the United States</li>
+			</ul>
+			<ul>
+				<li><h3>Yosemite Facts</h3></li>
+				<li>Located in California</li>
+				<li>Established on October 1, 1890</li>
+				<li>Totals 761,266.19 acres</li>
+				<li>Houses North America's tallest waterfall, Yosemite Falls</li>
+			</ul>
+
+		</div>
+
+
 		<script>
 			$(document).ready(function() {
+				
 				$('#visible_invisible').click(function(event) {
 					event.preventDefault();
 					$('dd').toggleClass('invisible');
-				})
+				});
+
+				$('li').first().css('font-weight', 'bold');
 			})
 		</script>
 	</body>
