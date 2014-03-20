@@ -12,57 +12,56 @@
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script src="/js/jquery.js"></script>
 		<style>
-			.invisible {
-				display: none;
+			h3 {
+				cursor: pointer;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<h1>National Parks FAQ</h1>
-			<dl>
+			<dl class="facts">
 				<dt>Where is the national park Acadia located?</dt>
-					<dd class="invisible">In Maine</dd>
+					<dd class="where_did_you_go">In Maine</dd>
 				<dt>When was the national park Arches established?</dt>
-					<dd class="invisible">November 12, 1971</dd>
+					<dd class="where_did_you_go">November 12, 1971</dd>
 				<dt>What kind of wildlife can be found in the Badlands national park?</dt>
-					<dd class="invisible">Bison, bighorn sheep, black-footed ferrets, and swift foxes</dd>
+					<dd class="where_did_you_go">Bison, bighorn sheep, black-footed ferrets, and swift foxes</dd>
 				<dt>What geologic formations can be found in the Arches national park?</dt>
-					<dd class="invisible">Stone columns, spires, fins, and towers</dd>
+					<dd class="where_did_you_go">Stone columns, spires, fins, and towers</dd>
 				<dt>Where is Big Bend located?</dt>
-					<dd class="invisible">Texas</dd>
+					<dd class="where_did_you_go">Texas</dd>
 				<dt>Where is Biscayne located?</dt>
-					<dd class="invisible">Florida</dd>
+					<dd class="where_did_you_go">Florida</dd>
 				<dt>Where is Bryce Canyon located?</dt>
-					<dd class="invisible">Utah</dd>
+					<dd class="where_did_you_go">Utah</dd>
 				<dt>When was Black Canyon of the Gunnison founded?</dt>
-					<dd class="invisible">October 21, 1999</dd>
+					<dd class="where_did_you_go">October 21, 1999</dd>
 				<dt>How many acres does Canyonlands have?</dt>
-					<dd class="invisible">337,597.83</dd>
+					<dd class="where_did_you_go">337,597.83</dd>
 				<dt>What is your favorite national park?</dt>
-					<dd class="invisible">Yosemite</dd>
+					<dd class="where_did_you_go">Yosemite</dd>
 			</dl>
 
-			<a href="#" id="visible_invisible">Click to toggle answers to FAQs</a>
 		</div>
 
 		<div class="container">
-			<ul>
-				<li><h3>Big Bend Facts</h3></li>
+			<h3 id="big_bend">Big Bend Facts</h3>
+			<ul id="big_bend_facts">
 				<li>Located in Texas</li>
 				<li>Established on June 12, 1944</li>
 				<li>Totals 801,163.21 acres</li>
 				<li>Includes a part of the Chihuahuan Desert</li>
 			</ul>
-			<ul>
-				<li><h3>Acadia Facts</h3></li>
+			<h3 id="acadia">Acadia Facts</h3>
+			<ul id="acadia_facts">
 				<li>Located in Maine</li>
 				<li>Established on February 26, 1919</li>
 				<li>Totals 47,389.67 acres</li>
 				<li>Features the tallest mountain on the Atlantic coast of the United States</li>
 			</ul>
-			<ul>
-				<li><h3>Yosemite Facts</h3></li>
+			<h3 id="yosemite">Yosemite Facts</h3>
+			<ul id="yosemite_facts">
 				<li>Located in California</li>
 				<li>Established on October 1, 1890</li>
 				<li>Totals 761,266.19 acres</li>
@@ -74,17 +73,26 @@
 
 		<script>
 			$(document).ready(function() {
-
-				$('#visible_invisible').click(function(event) {
-					event.preventDefault();
-					$('dd').toggleClass('invisible');
+				
+				$('.facts').click(function() {
+					$('.where_did_you_go').fadeToggle();
 				});
 
-				$('ul').each(function() {
-					$(this).children().first().css('font-weight', 'bold');
-				})
+				// $('li').first().css('font-weight', 'bold');
 
-			})
+				$('#big_bend').click(function() {
+					$('#big_bend_facts').fadeToggle();
+				});
+
+				$('#acadia').click(function() {
+					$('#acadia_facts').fadeToggle();
+				});
+
+				$('#yosemite').click(function() {
+					$('#yosemite_facts').fadeToggle();
+				});
+
+			});
 		</script>
 	</body>
 </html>
