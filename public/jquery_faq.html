@@ -11,6 +11,11 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script src="/js/jquery.js"></script>
+		<style>
+			h3 {
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -76,15 +81,15 @@
 				// $('li').first().css('font-weight', 'bold');
 
 				$('#big_bend').click(function() {
-					$('#big_bend_facts').hide();
+					$('#big_bend_facts').fadeToggle();
 				});
 
 				$('#acadia').click(function() {
-					$('#acadia_facts').hide();
+					$('#acadia_facts').fadeToggle();
 				});
 
 				$('#yosemite').click(function() {
-					$('#yosemite_facts').hide();
+					$('#yosemite_facts').fadeToggle();
 				});
 
 			});
