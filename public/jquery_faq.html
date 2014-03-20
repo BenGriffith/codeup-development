@@ -38,7 +38,6 @@
 					<dd class="where_did_you_go">Yosemite</dd>
 			</dl>
 
-			<a href="#" id="visible_invisible">Click to toggle answers to FAQs</a>
 		</div>
 
 		<div class="container">
@@ -71,7 +70,7 @@
 			$(document).ready(function() {
 				
 				$('.facts').click(function() {
-					$('.where_did_you_go').toggle();
+					$('.where_did_you_go').fadeToggle();
 				});
 
 				// $('li').first().css('font-weight', 'bold');
