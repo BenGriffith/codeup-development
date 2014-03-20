@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			img {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="/img/whack_a_lebron.png" alt="Ouch!">
+
+		<script src="/js/jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				var image = $('img');
+				$('#button_1').click(function(event) {
+					event.preventDefault();
+					image.fadeIn(1000);
+				})
+
+				$('#button_2').click(function() {
+					image.fadeOut(1000);
+				})
+
+				// image.fadeIn(1000);
+
+				// image.click(function() {
+				// 	$(this).fadeOut(1000);
+				// });
+			})
+		</script>
+	</body>
+
+	<button id="button_1">Fade In</button>
+	<button id="button_2">Fade Out</button>
+</html>
